@@ -1,5 +1,15 @@
-from gramatica import alfabeto, estado_inicial, estado_final, transições
+"""
+Trabalho final - Linguagens Formais e Autômatos
 
+grupo:
+    - Murilo Sterchile dos Santos
+    - Arthur Sauer
+    - Luca bonni
+
+"""
+
+from gramatica import alfabeto, estado_inicial, estado_final, transições
+# C:\Users\muril\Downloads\caso1.txt  -> exemplo de caminho para arquivo
 def automato(input_string):
     # Inicialização do estado atual
     estado_atual = estado_inicial
@@ -20,16 +30,31 @@ def automato(input_string):
     # Verificação se o estado atual é um estado final
     return estado_atual in estado_final
 
+def ler_entrada():
+    input_string = input("Informe a palavra: ")
+    return input_string
+
+def ler_arquivo(caminho):
+    with open(caminho, "r") as file:
+        input_string = file.read().replace('\n', '')
+    return input_string
+
+
 while True:
+    # Verificação se foi passado um arquivo de texto como argumento
+    caminho = input("Informe o caminho do arquivo ou pressione enter para informar a palavra manualmente: ")
 
-    k = input("\ninforme a palavra: ")
+    if caminho:
+        input_string = ler_arquivo(caminho)
+    else:
+        input_string = ler_entrada()
 
-    j = automato(k)
+    j = automato(input_string)
 
     if j == True:
-        print("palavra aceita")
+        print("palavra aceita\n")
     else:
-        print("palavra rejeitada")
+        print("palavra rejeitada\n")
 
     k = input('deseja realizar mais uma operação: (s) sim ou (n) não \n')
 
