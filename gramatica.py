@@ -12,50 +12,46 @@ estado_final = {'q0'}
 
 # transiçôes do automato
 transições = {
-    ('q0', 'l'): 'q1',
-    ('q1', 'o'): 'q1',
-    ('q1', 'c'): 'q2',
-    ('q1', 'b'): 'q3',
-    ('q1', 'g'): 'q4',
-    ('q2', 's'): 'q6',
-    ('q2', 'p'): 'q7',
-    ('q2', 'm'): 'q8',
-    ('q3', 'f'): 'q9',
-    ('q3', 'q'): 'q10',
-    ('q3', 'h'): 'q11',
-    ('q4', 'a'): 'q12',
-    ('q4', 'i'): 'q13',
-    ('q4', 'j'): 'q14',
-    ('q6', 'x'): 'q15',
-    ('q7', 'x'): 'q15',
-    ('q8', 'x'): 'q15',
-    ('q9', 'x'): 'q15',
-    ('q10', 'x'): 'q15',
-    ('q11', 'x'): 'q15',
-    ('q12', 'x'): 'q15',
-    ('q13', 'x'): 'q15',
-    ('q14', 'x'): 'q15',
-    ('q15', '1'): 'q15',
-    ('q15', 'k'): 'q5',
-    ('q15', 'y'): 'q1',
-    ('q5', 't'): 'q17',
-    ('q5', 'f'): 'q18',
-    ('q5', 'z'): 'q18',
-    ('q17', 'u'): 'q21',
-    ('q17', 'w'): 'q20',
-    ('q18', 'e'): 'q5',
-    ('q19', 'e'): 'q5',
-    ('q20', 'e'): 'q5',
-    ('q21', 'e'): 'q5',
-    ('q22', 'n'): 'q5',
-    ('q22', 'v'): 'q1',
-    ('q18', 'a'): 'q22',
-    ('q19', 'a'): 'q22',
-    ('q20', 'a'): 'q22',
-    ('q21', 'a'): 'q22',
-    ('q1', 'd'): 'q0',
+    ('q0', 'l'): 'q1',      #Inicia a máquina
+    ('q1', 'o'): 'q1',      #Máquina fica aguardando
+    ('q1', 'c'): 'q2',      #Escolhe o tipo de produto: Chocolate
+    ('q1', 'b'): 'q3',      #Escolhe o tipo de produto: Batata Chips
+    ('q1', 'g'): 'q4',      #Escolhe o tupo de produto: Goma de mascar
+    ('q2', 's'): 'q6',      #Escolhe o produto: Chocolate simples
+    ('q2', 'p'): 'q7',      #Escolhe o produto: Chocolate uva passa
+    ('q2', 'm'): 'q8',      #Escolhe o produto: Chocolate morango
+    ('q3', 'r'): 'q9',      #Escolhe o produto: Batata red pepper
+    ('q3', 'q'): 'q10',     #Escolhe o produto: Batata queijo
+    ('q3', 'h'): 'q11',     #Escolhe o produto: Batata hot dog
+    ('q4', 'a'): 'q12',     #Escolhe o produto: Goma amora
+    ('q4', 'i'): 'q13',     #Escolhe o produto: Goma iogurte
+    ('q4', 'j'): 'q14',     #Escolhe o produto: Goma jabuticaba
+    ('q6', 'x'): 'q15',     #Confirma o produto
+    ('q7', 'x'): 'q15',     #Confirma o produto
+    ('q8', 'x'): 'q15',     #Confirma o produto
+    ('q9', 'x'): 'q15',     #Confirma o produto
+    ('q10', 'x'): 'q15',    #Confirma o produto
+    ('q11', 'x'): 'q15',    #Confirma o produto
+    ('q12', 'x'): 'q15',    #Confirma o produto
+    ('q13', 'x'): 'q15',    #Confirma o produto
+    ('q14', 'x'): 'q15',    #Confirma o produto
+    ('q15', '1'): 'q15',    #Seleciona a quantidade
+    ('q15', 'k'): 'q5',     #Termina a escolha
+    ('q15', 'y'): 'q1',     #Cancela
+    ('q5', 't'): 'q17',     #Forma de pagamento: Cartão
+    ('q5', 'f'): 'q18',     #Forma de pagamento: Dinheiro
+    ('q5', 'z'): 'q18',     #Forma de pagamento: Pix
+    ('q17', 'u'): 'q21',    #Seleciona o tipo de cartão: Crédito
+    ('q17', 'w'): 'q20',    #Seleciona o tipo de cartão: Débito
+    ('q18', 'e'): 'q5',     #Troca a forma de pagamento
+    ('q19', 'e'): 'q5',     #Troca a forma de pagamento
+    ('q20', 'e'): 'q5',     #Troca a forma de pagamento
+    ('q21', 'e'): 'q5',     #Troca a forma de pagamento
+    ('q22', 'n'): 'q5',     #Pagamento foi recusado
+    ('q22', 'v'): 'q1',     #Pagamento foi aceito
+    ('q18', 'a'): 'q22',    #Confirmar forma de pagamento
+    ('q19', 'a'): 'q22',    #Confirmar forma de pagamento
+    ('q20', 'a'): 'q22',    #Confirmar forma de pagamento
+    ('q21', 'a'): 'q22',    #Confirmar forma de pagamento
+    ('q1', 'd'): 'q0',      #Desliga a máquina
 }
-
-
-
-
