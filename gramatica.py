@@ -1,3 +1,19 @@
+"""
+Trabalho final - Linguagens Formais e Autômatos
+
+grupo:
+    - Murilo Sterchile
+    - Arthur Sauer
+    - Luca Boni
+
+"""
+# Esse arquivo contem as seguintes definições:
+#   alfabeto ->  lista
+#   estados  ->  conjunto
+#   estado_inicial -> string
+#   estado_final -> conjunto
+#   transições  -> dicionário
+
 # símbolos pertencentes ao alfabeto da linguagem
 alfabeto = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1']
 
@@ -20,12 +36,13 @@ transições = {
     ('q2', 's'): 'q6',      #Escolhe o produto: Chocolate simples
     ('q2', 'p'): 'q7',      #Escolhe o produto: Chocolate uva passa
     ('q2', 'm'): 'q8',      #Escolhe o produto: Chocolate morango
-    ('q3', 'r'): 'q9',      #Escolhe o produto: Batata red pepper
+    ('q3', 'f'): 'q9',      #Escolhe o produto: Batata red pepper
     ('q3', 'q'): 'q10',     #Escolhe o produto: Batata queijo
     ('q3', 'h'): 'q11',     #Escolhe o produto: Batata hot dog
     ('q4', 'a'): 'q12',     #Escolhe o produto: Goma amora
     ('q4', 'i'): 'q13',     #Escolhe o produto: Goma iogurte
     ('q4', 'j'): 'q14',     #Escolhe o produto: Goma jabuticaba
+    ('q3', 'r'): 'q9',      #Escolhe o produto: Batata red
     ('q6', 'x'): 'q15',     #Confirma o produto
     ('q7', 'x'): 'q15',     #Confirma o produto
     ('q8', 'x'): 'q15',     #Confirma o produto
@@ -55,3 +72,7 @@ transições = {
     ('q21', 'a'): 'q22',    #Confirmar forma de pagamento
     ('q1', 'd'): 'q0',      #Desliga a máquina
 }
+
+
+
+
